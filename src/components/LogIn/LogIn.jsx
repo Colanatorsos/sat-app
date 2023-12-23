@@ -2,6 +2,8 @@ import React from 'react'
 import scss from './LogIn.module.scss'
 
 const LogIn = () => {
+  
+
   return (
     <form className={scss.Form}>
       <h1>Зарегистрируйте аккаунт</h1>

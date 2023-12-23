@@ -3,8 +3,11 @@ import scss from './Card.module.scss'
 import photoOne from '../../assets/photo1.png'
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
+import { useActions } from './../../hooks/useActions';
 
 const Card = () => {
+  const { addToCart, toggleToFavorite } = useActions()
+
   const data = {
     img: [],
     title: 'Бишкек, Парк Ататюрк, Масануева 58',
@@ -40,7 +43,7 @@ const Card = () => {
             <p>Добавлено {data.added}</p>
             <div>
               <a href="/"><FaPhoneAlt />Позвонить</a>
-              <a href="/"><CiHeart />Сохранить</a>
+              <button onClick={() => addToCart(data)}><CiHeart />Сохранить</button>
             </div>
           </div>
         </div>

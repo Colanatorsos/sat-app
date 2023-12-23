@@ -14,13 +14,12 @@ const Header = () => {
         <span className={scss.div_seo_header_button} onClick={() => setActive(!active)}></span>
         {/*<Logo className={scss.div_seo_header_logo} />*/}
         <img src={LogoSVG} alt="" />
-        <Profile className={scss.div_seo_header_profile} />
+        <Link to='/signin'><Profile className={scss.div_seo_header_profile} /></Link>
       </div>
       <div className={active ? scss.demo_active : scss.demo}>
         <Link to='/'>Главная</Link>
         <Link to='/filter'>Поиск</Link>
-        <Link to='/signin'>Войти</Link>
-        <Link to='/product'>Продукт</Link>
+        <Link to='/catalog'>Продукт</Link>
         <Link to='/settings'>Настройки</Link>
       </div>
     </header>

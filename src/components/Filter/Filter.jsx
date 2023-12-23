@@ -1,6 +1,7 @@
 import React from 'react'
 import scss from './Filter.module.scss'
 import Arrow from '../../assets/arrow.svg'
+import { Link } from 'react-router-dom'
 
 const Filter = () => {
   return (
@@ -51,7 +52,7 @@ const Filter = () => {
       </div>
       <div className={scss.buttons}>
         <button>Очистить</button>
-        <button>Найти жилье</button>
+        <Link to='/catalog'>Найти жилье</Link>
       </div>
     </form>
   )

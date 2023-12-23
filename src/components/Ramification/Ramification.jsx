@@ -1,5 +1,6 @@
 import React from 'react'
 import scss from './Ramification.module.scss'
+import { Link } from 'react-router-dom'
 
 const Ramification = () => {
   return (
@@ -11,8 +12,8 @@ const Ramification = () => {
         <p className={scss.div}>Ищите недвижимость на продажу и в аренду <br /> в Кыргызстане</p>
       </div>
       <div className={scss.link}>
-        <button className={scss.text_wrapper_2}>Продажа</button>
-        <button className={scss.text_wrapper_3}>Покупка</button>
+        <Link to='/' className={scss.text_wrapper_2}>Продажа</Link>
+        <Link to='/filter' className={scss.text_wrapper_3}>Покупка</Link>
       </div>
     </div>
   )
